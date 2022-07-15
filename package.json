@@ -1,27 +1,27 @@
 {
-  "name": "vuejs-datepicker",
-  "version": "1.6.2",
-  "description": "A simple Vue.js datepicker component. Supports disabling of dates, inline mode, translations",
+  "name": "vuejs-datepicker-th",
+  "version": "1.6.1",
+  "description": "A simple Vue.js datepicker TH component. Supports disabling of dates, inline mode, translations",
   "keywords": [
     "vue",
-    "datepicker",
-    "date-picker",
+    "datepicker-th",
+    "date-picker-th",
     "calendar"
   ],
-  "main": "dist/vuejs-datepicker.js",
-  "module": "dist/vuejs-datepicker.esm.js",
-  "unpkg": "dist/vuejs-datepicker.min.js",
+  "main": "dist/vuejs-datepicker-th.js",
+  "module": "dist/vuejs-datepicker-th.esm.js",
+  "unpkg": "dist/vuejs-datepicker-th.min.js",
   "files": [
     "src",
     "dist"
   ],
-  "author": "Charlie Kassel <ck@charliekassel.com>",
+  "author": "RiderRM7 <riderrm7@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/charliekassel/vuejs-datepicker"
+    "url": "https://github.com/riderrm7/vuejs-datepicker-th"
   },
   "bugs": {
-    "url": "https://github.com/charliekassel/vuejs-datepicker/issues"
+    "url": "https://github.com/riderrm7/vuejs-datepicker-th/issues"
   },
   "private": false,
   "license": "MIT",
