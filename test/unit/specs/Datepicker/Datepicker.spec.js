@@ -265,7 +265,7 @@ describe('Datepicker.vue using UTC', () => {
     const ambiguousYear = ambiguousDate.getUTCFullYear()
     const ambiguousMonth = (`0${ambiguousDate.getUTCMonth() + 1}`).slice(-2)
     const ambiguousDay = (`0${ambiguousDate.getUTCDate()}`).slice(-2)
-    const UTCString = `${ambiguousYear} ${ambiguousMonth} ${ambiguousDay}`
+    const UTCString = `${ambiguousYear + 543} ${ambiguousMonth} ${ambiguousDay}`
 
     // It's important to use the `mount` helper here
     wrapper = mount(Datepicker, {

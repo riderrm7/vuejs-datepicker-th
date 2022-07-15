@@ -47,7 +47,7 @@ export default {
         : new Date(Math.floor(d.getFullYear() / 10) * 10, d.getMonth(), d.getDate(), d.getHours(), d.getMinutes())
       for (let i = 0; i < 10; i++) {
         years.push({
-          year: this.utils.getFullYear(dObj),
+          year: this.translation.language === 'Thai' ? this.utils.getFullYear(dObj) + 543 : this.utils.getFullYear(dObj),
           timestamp: dObj.getTime(),
           isSelected: this.isSelectedYear(dObj),
           isDisabled: this.isDisabledYear(dObj)
@@ -63,6 +63,9 @@ export default {
       const decadeStart = Math.floor(this.utils.getFullYear(this.pageDate) / 10) * 10
       const decadeEnd = decadeStart + 9
       const yearSuffix = this.translation.yearSuffix
+      if (this.translation.language === 'Thai') {
+        return `${decadeStart + 543} - ${decadeEnd + 543}${yearSuffix}`
+      }
       return `${decadeStart} - ${decadeEnd}${yearSuffix}`
     },
     /**

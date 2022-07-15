@@ -126,6 +126,9 @@ export default {
      */
     currYearName () {
       const yearSuffix = this.translation.yearSuffix
+      if (this.translation.language === 'Thai') {
+        return `${this.utils.getFullYear(this.pageDate) + 543}${yearSuffix}`
+      }
       return `${this.utils.getFullYear(this.pageDate)}${yearSuffix}`
     },
     /**
