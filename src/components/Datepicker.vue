@@ -94,7 +94,7 @@
   </div>
 </template>
 <script>
-import en from '../locale/translations/en'
+import defaultLang from '../locale/translations/th'
 import DateInput from './DateInput.vue'
 import PickerDay from './PickerDay.vue'
 import PickerMonth from './PickerMonth.vue'
@@ -120,7 +120,7 @@ export default {
     },
     language: {
       type: Object,
-      default: () => en
+      default: () => defaultLang
     },
     openDate: {
       validator: val => utils.validateDateInput(val)
