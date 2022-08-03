@@ -12,7 +12,7 @@ export default [{
     {
       file: 'dist/vuejs-datepicker-th.js',
       format: 'umd',
-      name: 'vuejsDatepicker'
+      name: 'VuejsDatepickerTH'
     },
     {
       file: 'dist/vuejs-datepicker-th.common.js',
@@ -34,7 +34,7 @@ export default [{
   output: {
     file: 'dist/vuejs-datepicker-th.min.js',
     format: 'umd',
-    name: 'vuejsDatepicker'
+    name: 'VuejsDatepickerTH'
   },
   plugins: [
     vue({css: true}),
@@ -44,3 +44,4 @@ export default [{
     babel({exclude: 'node_modules/**'})
   ]
 }]
+

@@ -1,9 +1,4 @@
-# Datepicker
-
-[![Travis Build](https://img.shields.io/travis/charliekassel/vuejs-datepicker.svg)](https://travis-ci.org/charliekassel/vuejs-datepicker)
-[![Version](https://img.shields.io/npm/v/vuejs-datepicker.svg)](https://www.npmjs.com/package/vuejs-datepicker)
-[![Coveralls github](https://img.shields.io/coveralls/github/charliekassel/vuejs-datepicker.svg)](https://coveralls.io/github/charliekassel/vuejs-datepicker?branch=master)
-[![Downloads](https://img.shields.io/npm/dm/vuejs-datepicker.svg)](https://www.npmjs.com/package/vuejs-datepicker)
+# DatepickerTH
 
 A datepicker Vue component. Compatible with Vue 2.x
 
@@ -17,76 +12,36 @@ A datepicker Vue component. Compatible with Vue 2.x
 - [Highlighted dates](#highlighted-dates)
 - [Translations](#translations)
 
-NB. Vue 1.x was supported up to version v0.9.9. If you want to use this component with Vue 1.x you can install with `npm install vuejs-datepicker@0.9.9`
 
 ## Demo
 
-To view a demo online:
-https://codesandbox.io/s/mpklq49wp
+[![Edit Vue DatepickerTH demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/vue-datepickerth-demo-suf7ps?fontsize=14&hidenavigation=1&theme=dark)
 
 To view demo examples locally clone the repo and run `npm install && npm run serve`
 
 ## Install
 
 ``` bash
-npm install vuejs-datepicker --save
+npm install vuejs-datepicker-th --save
 ```
 
 
 ``` javascript
-import Datepicker from 'vuejs-datepicker';
+import DatepickerTH from 'vuejs-datepicker-th';
 
 export default {
   // ...
   components: {
-    Datepicker
+    DatepickerTH
   }
   // ...
 }
 ```
 
-Or use directly from a CDN
-``` html
-<div id="app">
-  <vuejs-datepicker></vuejs-datepicker>
-</div>
-<script src="https://unpkg.com/vue"></script>
-<script src="https://unpkg.com/vuejs-datepicker"></script>
-<script>
-const app = new Vue({
-  el: '#app',
-  components: {
-  	vuejsDatepicker
-  }
-})
-</script>
-
-<!-- French language example -->
-<div id="app">
-  <vuejs-datepicker :language="fr"></vuejs-datepicker>
-</div>
-<script src="https://unpkg.com/vue"></script>
-<script src="https://unpkg.com/vuejs-datepicker"></script>
-<script src="https://unpkg.com/vuejs-datepicker/dist/locale/translations/fr.js"></script>
-<script>
-const app = new Vue({
-  el: '#app',
-  data() {
-    return {
-      fr: vdp_translation_fr.js
-    }
-  },
-  components: {
-  	vuejsDatepicker
-  }
-})
-</script>
-```
-
 ## Usage
 
 ``` html
-<datepicker></datepicker>
+<datepicker-th></datepicker-th>
 ```
 
 *value* prop if passed should be a Date object
@@ -97,23 +52,23 @@ var state = {
   date: new Date(2016, 9,  16)
 }
 </script>
-<datepicker :value="state.date"></datepicker>
+<datepicker-th :value="state.date"></datepicker-th>
 ```
 support name attribute for normal html form submission
 ``` html
-<datepicker :value="state.date" name="uniquename"></datepicker>
+<datepicker-th :value="state.date" name="uniquename"></datepicker-th>
 ```
 Using `v-model`
 ``` html
-<datepicker v-model="state.date" name="uniquename"></datepicker>
+<datepicker-th v-model="state.date" name="uniquename"></datepicker-th>
 ```
 Emits events
 ``` html
-<datepicker @selected="doSomethingInParentComponentFunction" @opened="datepickerOpenedFunction" @closed="datepickerClosedFunction">
+<datepicker-th @selected="doSomethingInParentComponentFunction" @opened="datepickerOpenedFunction" @closed="datepickerClosedFunction">
 ```
 Inline always open version
 ``` html
-<datepicker :inline="true"></datepicker>
+<datepicker-th :inline="true"></datepicker-th>
 ```
 ## Available props
 
@@ -140,7 +95,7 @@ Inline always open version
 | day-cell-content              | Function        |             | Use to render custom content in day cell |
 | bootstrap-styling             | Boolean         | false       | Output bootstrap v4 styling classes.     |
 | initial-view                  | String          | minimumView | If set, open on that view                |
-| disabled                      | Boolean         | false       | If true, disable Datepicker on screen    |
+| disabled                      | Boolean         | false       | If true, disable DatepickerTH on screen    |
 | required                      | Boolean         | false       | Sets html required attribute on input    |
 | typeable                      | Boolean         | false       | If true, allow the user to type the date |
 | use-utc                       | Boolean         | false       | use UTC for time calculations            |
@@ -199,7 +154,7 @@ This allow us to use moment, date-fns, globalize or any other library to format 
     }
   }
 </script>
-<datepicker :format="customFormatter"></datepicker>
+<datepicker-th :format="customFormatter"></datepicker-th>
 ```
 
 ## Disabled Dates
@@ -238,7 +193,7 @@ var state = {
   }
 }
 </script>
-<datepicker :disabled-dates="state.disabledDates"></datepicker>
+<datepicker-th :disabled-dates="state.disabledDates"></datepicker-th>
 ```
 
 ## Highlighted Dates
@@ -274,7 +229,7 @@ var state = {
   }
 }
 </script>
-<datepicker :highlighted="state.highlighted"></datepicker>
+<datepicker-th :highlighted="state.highlighted"></datepicker-th>
 ```
 ## Slots
 
@@ -287,11 +242,11 @@ Sometimes you need to show custom content before the calendar header. For such c
 An example would be to use bootstrap's `input-group-prepend` and `input-group-append`
 to show some custom text:
 ``` html
-<datepicker :bootstrap-styling="true">
+<datepicker-th :bootstrap-styling="true">
   <div slot="beforeCalendarHeader" class="calender-header">
     Choose a Date
   </div>
-</datepicker>
+</datepicker-th>
 ```
 
 #### afterDateInput
@@ -300,11 +255,11 @@ To implement some custom styling (for instance to add an animated placeholder) o
 `afterDateInput` allows you to do that:
 
 ``` html
-<datepicker>
+<datepicker-th>
   <span slot="afterDateInput" class="animated-placeholder">
     Choose a Date
   </span>
-</datepicker>
+</datepicker-th>
 ```
 
 
@@ -321,7 +276,7 @@ Contributing guide - please use appropriate code from this [list](http://www.ian
 
 Below script tag in component.
 ```javascript
-import {en, es} from 'vuejs-datepicker/dist/locale'
+import {en, th} from 'vuejs-datepicker-th/dist/locale'
 ```
 
 In component data.
@@ -329,67 +284,22 @@ In component data.
 data () {
     return {
       en: en,
-      es: es
+      th: th
     }
 }
 ```
 
 html.
 ```javascript
-<datepicker :language="es"></datepicker>
+<datepicker-th :language="th"></datepicker-th>
 ```
 
 Available languages
 
 | Abbr        | Language         |          |
 | ----------- |------------------|----------|
-| af          | Afrikaans        |          |
-| ar          | Arabic           |          |
-| bg          | Bulgarian        |          |
-| bs          | Bosnian          |          |
-| ca          | Catalan          |          |
-| cs          | Czech            |          |
-| da          | Danish           |          |
-| de          | German           |          |
-| ee          | Estonian         |          |
-| el          | Greek            |          |
-| en          | English          | *Default*|
-| es          | Spanish          |          |
-| fa          | Persian (Farsi)  |          |
-| fi          | Finnish          |          |
-| fo          | Faroese          |          |
-| fr          | French           |          |
-| ge          | Georgia          |          |
-| gl          | Galician         |          |
-| he          | Hebrew           |          |
-| hu          | Hungarian        |          |
-| hr          | Croatian         |          |
-| id          | Indonesian       |          |
-| is          | Icelandic        |          |
-| it          | Italian          |          |
-| ja          | Japanese         |          |
-| kk          | Kazakh           |          |
-| ko          | Korean           |          |
-| lb          | Luxembourgish    |          |
-| lt          | Lithuanian       |          |
-| lv          | Latvian          |          |
-| mk          | Macedonian       |          |
-| mn          | Mongolian        |          |
-| nbNO        | Norwegian Bokmål |          |
-| nl          | Dutch            |          |
-| pl          | Polish           |          |
-| ptBR        | Portuguese-Brazil|          |
-| ro          | Romanian         |          |
-| ru          | Russian          |          |
-| sk          | Slovak           |          |
-| slSI        | Slovenian        |          |
-| sv          | Swedish          |          |
-| sr          | Serbian (Latin)  |          |
-| srCyrl      | Serbian (Cyrl)   |          |
-| th          | Thai             |          |
-| tr          | Turkish          |          |
-| uk          | Ukrainian        |          |
-| ur          | Urdu             |          |
-| vi          | Vietnamese       |          |
-| zh          | Chinese          |          |
-| zhHK        | Chinese_HK       |          |
+| th          | Thai             | *Default*|
+| en          | English          |          |
+
+### Thank
+this project inspiration from https://github.com/charliekassel/vuejs-datepicker
