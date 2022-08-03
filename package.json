@@ -1,12 +1,13 @@
 {
   "name": "vuejs-datepicker-th",
-  "version": "1.6.2",
-  "description": "A simple Vue.js datepicker TH component. Supports disabling of dates, inline mode, translations",
+  "version": "1.0.1",
+  "description": "A simple Vue.js Datepicker TH component. Supports disabling of dates, inline mode, TH, EN only",
   "keywords": [
-    "vue",
+    "vuejs-datepicker-th",
+    "vuejs-datepicker",
     "datepicker-th",
     "date-picker-th",
-    "calendar"
+    "vuejs-calendar-th"
   ],
   "main": "dist/vuejs-datepicker-th.js",
   "module": "dist/vuejs-datepicker-th.esm.js",
@@ -18,7 +19,7 @@
   "author": "RiderRM7 <riderrm7@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/riderrm7/vuejs-datepicker-th"
+    "url": "git+https://github.com/riderrm7/vuejs-datepicker-th.git"
   },
   "bugs": {
     "url": "https://github.com/riderrm7/vuejs-datepicker-th/issues"
@@ -87,5 +88,9 @@
     "vue-jest": "^4.0.0-beta.2",
     "vue-server-renderer": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
+  },
+  "homepage": "https://github.com/riderrm7/vuejs-datepicker-th#readme",
+  "directories": {
+    "example": "example"
   }
 }
